@@ -1,5 +1,13 @@
 #!/usr/bin/env python
 
+#     FILE INFO       ##################################################
+#
+#        Mahitha Valluru                March 17, 2017
+#
+#        YELP Data Science Project
+#
+########################################################################
+
 
 #   ALL IMPORTS   ######################################################
 # import pandas as pd
@@ -55,18 +63,13 @@ with open(filepath, encoding="utf8") as f:
             cursor.execute('''INSERT into yelp.checkin (business_id, checkin_type, checkin_day, checkin_hour, checkin_count)
                                       values (%s, %s, %s, %s, %s )''',
                            (bus_id, type, day_id, hour_id, checkin_count))
+            j += 1
 
             connection.commit()
-
         i += 1
 
-        if i > 10:
-            break
 
 cursor.close()
-
-connection.close()
-
 
 connection.commit()
 connection.close()
