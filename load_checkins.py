@@ -23,8 +23,8 @@ path = 'D:\Mahitha\Yelp\Data\Challenge Round 9 Data\yelp_academic_dataset_'
 checkin_file = 'checkin.json'
 filepath = path + checkin_file
 
-connection = mysql.connector.connect(user='root', password='SunnyBablu$999',
-                              host='localhost',port='3306',
+connection = mysql.connector.connect(user='root', password='XXXXX',
+                              host='localhost', port='3306',
                               database='yelp')
 cursor = connection.cursor()
 
